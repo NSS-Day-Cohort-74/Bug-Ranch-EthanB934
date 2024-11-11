@@ -76,11 +76,11 @@ Your journey will take you through the wildness of the American Midwest and acro
 ```
 
 1. In the **main** module, one of the first lines of code is `const drovers = hireDrovers(cattleToDrive)`. Explain what the value of the `drovers` variable is when that line of code runs.
-   > Your answer here
+   > The value of the drovers' variable is an array of objects.
 2. At the bottom of the main module, you will see the following code - `for (const drover of drovers)`. Explain what the values of both the `drover` and the `drovers` variables are.
-   > Your answer here
+   > The drovers' variable has the same value here as it had when hireDrovers() evaluated. Drover is a single object taken from the drovers array of objects. 
 3. In the **journey** module, there is a `journeyMaker()` function. In that function, there is a variable named `areas` which will have the value of an object. Use your debugger to show what the value of each key is on that object. Use [Loom](https://www.loom.com) to record your session.
-   > Your public Loom URL here
+   > [Your public Loom URL here](https://www.loom.com/share/8477457a00f84bc1ad60d2e2cb37299e?sid=e7998cfd-1f1a-4399-b89c-eaf9ce5b4b55)
 4. Also in the **journey** module, there is the following code:
    ```js
    for (let forestNumber = 0; forestNumber < areas.forests; forestNumber++) {
@@ -88,12 +88,11 @@ Your journey will take you through the wildness of the American Midwest and acro
    }
    ```
    Explain this code with your best vocabulary.
-   > Your answer here
+   > This is a for while loop. The keyword, "for" is our hint. In the parenthesis, we have three, semi-colon separated expressions. First: "let forestNumber = 0" this is the initialization of our variable forestNumber where we are setting forestNumber equal to zero. Why zero, and why use the "let" declaration? Let's check out the second expression: "forestNumber < areas.forests." We see that our declared and initialized variable has reappeared in this for while loop, but this middle section is why this loop includes the "while" term. As long as this condition remains true, the for while loop will continue to iterate. What is our condition? Remember, we first declared and initialized forestNumber with zero. We can read our conditional expression as: while zero is less than the area's object property of forests (which returns a numbers); iterate and execute the following code.  So, what are we iterating? Unfortunately, this particular block of code does not give us the context what we are iterating, except that our previous question mentioned the "areas" object. Finally, our last expression: "forestNumber++" This last expression is how we keep from running an infinite loop and draws us closer to ending the loop by having our while condition fail. Essentially, we are saying zero + one. On the next iteration, forestNumber while have the value one. This is why the keyword let was used to first declare our variable. As long as our while condition is met, the last line of code will be executed: "journey.push("forest")." If the for while loop is evaluated to true, meeting the condition, then we will push, or add to the right of our array, journey, the string, "forest."
 5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
-   > Your answer here
+   > The database variable is declared as the first line of code, and also the last. It contains two array of objects, the first array of objects is named cattleTypes, and the second drovers. These two array of objects are stored in a single variable, "database." Why? We must look to the last line of code where the database variable, now stored with both array of objects, has also been stored. Preceding the last line, we see the expression: "module.exports = " The reason for the database variable now storing the array of objects has become clear. The code has been modularized and will be imported into the main module for readability. 
 6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
-   > Your answer here
-
+   > HerdSize is defining a parameter for the hireDrovers() function. As it stands alone, herdSize does not have any value whatsoever until the hireDrovers() function is invoked with an argument passed into it. In this project we used a value of 50, found in the main module. The value of 50 was stored in a variable called, "cattleToDrive." So, when we execute that code, it will appear: hireDrovers(cattleToDrive); the function has been invoked, and an argument, containing the integer 50 has been passed. It will go to where hireDrovers() was defined, (where we first saw herdSize) and now herdSize would have the value of 50. 
 ## When You Are Done
 
 After you have answered all the questions above, you need to push all of your code back up to Github. Follow these instructions.
